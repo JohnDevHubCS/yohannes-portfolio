@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yohannes Ekubay | Computer Science Student &amp; Founder of NexaVision</title>
+<meta name="description" content="Portfolio of Yohannes Ekubay, computer science student and future founder of NexaVision.">
+<meta name="theme-color" content="#070b14">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yohannes Ekubay | CS Student &amp; Founder of NexaVision">
+<meta property="og:description" content="Python, AI agents and web projects. Follow the journey to NexaVision.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="og-image.png">
+<meta name="author" content="Yohannes Ekubay">
+<meta name="keywords" content="Yohannes Ekubay, computer science student, Python, AI agents, portfolio, NexaVision">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Yohannes Ekubay","jobTitle":"Computer Science student","alumniOf":"Debre Berhan University","sameAs":["https://github.com/JohnDevHubCS","https://www.youtube.com/@nexavisionofficial4","https://www.tiktok.com/@nexavisionofficial4","https://t.me/NexaVisionOfficial"]}</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<style>
+:root{--bg:#070b14;--bg2:#0d1424;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.09);--text:#e8eefb;--muted:#8fa0bf;--a:#4f8cff;--b:#9b6bff;--c:#22d3ee;--grad:linear-gradient(120deg,var(--a),var(--b),var(--c))}
+:root[data-theme=light]{--bg:#f5f7fc;--bg2:#e9eef9;--card:rgba(255,255,255,.75);--line:rgba(15,30,70,.12);--text:#0f1a33;--muted:#53627f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;transition:background .4s,color .4s}
+a{color:inherit;text-decoration:none}
+#bg{position:fixed;inset:0;z-index:-1;width:100%;height:100%}
+.glow{position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(79,140,255,.18),transparent 65%);transform:translate(-50%,-50%);left:50%;top:30%}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:100}
+
+/* splash */
+#splash{position:fixed;inset:0;z-index:999;background:radial-gradient(circle at 50% 40%,#101a33,#05070d);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .7s,visibility .7s,transform .7s}
+#splash.hide{opacity:0;visibility:hidden;transform:scale(1.06)}
+.logo{width:92px;height:92px;border-radius:26px;background:var(--grad);display:grid;place-items:center;font-size:42px;font-weight:800;color:#fff;box-shadow:0 0 60px rgba(79,140,255,.55);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.08);box-shadow:0 0 90px rgba(155,107,255,.7)}}
+.sp-name{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:800;letter-spacing:.35em;color:#fff;text-indent:.35em}
+.sp-sub{color:#8fa0bf;font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;min-height:1.2em}
+.sp-track{width:min(280px,70vw);height:4px;border-radius:4px;background:rgba(255,255,255,.12);overflow:hidden}
+.sp-fill{height:100%;width:0;background:var(--grad);transition:width .15s}
+.sp-pct{color:#8fa0bf;font:600 .8rem Consolas,monospace}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 5vw;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 70%,transparent);border-bottom:1px solid var(--line)}
+.brand{font-weight:800;letter-spacing:.04em}.brand span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:flex;gap:26px;align-items:center}
+.links a{color:var(--muted);font-size:.92rem;transition:color .2s}.links a:hover{color:var(--text)}
+.icon-btn{background:var(--card);border:1px solid var(--line);color:var(--text);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1rem}
+#menu{display:none}
+@media(max-width:760px){#menu{display:block}.links{position:absolute;top:100%;left:0;right:0;flex-direction:column;padding:18px;background:var(--bg2);border-bottom:1px solid var(--line);display:none}.links.open{display:flex}}
+
+section{padding:110px 5vw 40px;max-width:1120px;margin:auto}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.tag{display:inline-flex;gap:8px;align-items:center;padding:6px 14px;border:1px solid var(--line);border-radius:99px;background:var(--card);color:var(--muted);font-size:.85rem;width:fit-content}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e}
+h1{font-size:clamp(2.4rem,7vw,4.6rem);line-height:1.08;margin:18px 0 10px;font-weight:800}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.typed{font-size:clamp(1.1rem,2.6vw,1.6rem);color:var(--muted);min-height:2em}
+.typed b{color:var(--text);font-weight:600}.caret{display:inline-block;width:2px;height:1.1em;background:var(--c);margin-left:3px;vertical-align:middle;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{max-width:640px;color:var(--muted);margin:14px 0 28px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:13px 26px;border-radius:12px;font-weight:700;border:1px solid var(--line);background:var(--card);transition:transform .2s,box-shadow .2s;cursor:pointer;color:var(--text);font-size:.95rem}
+.btn:hover{transform:translateY(-3px)}
+.btn.p{background:var(--grad);color:#fff;border:0;box-shadow:0 10px 30px rgba(79,140,255,.35)}
+
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:30px}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;backdrop-filter:blur(8px);transition:transform .25s,border-color .25s,box-shadow .25s;transform-style:preserve-3d}
+.card:hover{border-color:var(--a);box-shadow:0 18px 50px rgba(79,140,255,.15)}
+.card h3{margin-bottom:8px}.card p{color:var(--muted);font-size:.95rem}
+.ico{font-size:1.8rem;margin-bottom:10px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:26px}
+.stat{text-align:center;padding:20px}.stat b{display:block;font-size:2.1rem}.stat span{color:var(--muted);font-size:.85rem}
+.skill{margin-bottom:18px}.skill div{display:flex;justify-content:space-between;font-size:.92rem;margin-bottom:6px}
+.meter{height:8px;background:var(--line);border-radius:8px;overflow:hidden}.meter i{display:block;height:100%;width:0;background:var(--grad);border-radius:8px;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.chip{display:inline-block;margin:4px 6px 0 0;padding:4px 12px;border-radius:99px;border:1px solid var(--line);font-size:.8rem;color:var(--muted)}
+.nexa{background:linear-gradient(135deg,rgba(79,140,255,.14),rgba(155,107,255,.14));border-radius:24px;padding:clamp(24px,5vw,48px);border:1px solid var(--line)}
+.social{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px}
+.social a{display:flex;gap:10px;align-items:center;padding:12px 18px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:.92rem;transition:.2s}
+.social a:hover{transform:translateY(-3px);border-color:var(--c)}
+footer{text-align:center;color:var(--muted);padding:50px 5vw 40px;font-size:.88rem}
+#top{position:fixed;right:22px;bottom:22px;opacity:0;pointer-events:none;transition:.3s;z-index:40}
+#top.show{opacity:1;pointer-events:auto}
+#toast{position:fixed;bottom:26px;left:50%;transform:translate(-50%,90px);background:var(--bg2);border:1px solid var(--line);padding:10px 20px;border-radius:12px;transition:.35s;z-index:200}
+#toast.show{transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+/* v2 extras */
+.avatar{width:132px;height:132px;border-radius:50%;padding:4px;background:conic-gradient(from 0deg,var(--a),var(--b),var(--c),var(--a));animation:spin 6s linear infinite;margin-bottom:22px;box-shadow:0 0 50px rgba(79,140,255,.35)}
+.avatar span,.avatar img{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--bg2);font-size:2.4rem;font-weight:800;object-fit:cover;animation:spin 6s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.code{max-width:470px;margin-top:34px;border:1px solid var(--line);border-radius:16px;background:rgba(5,8,16,.75);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35);animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.code .bar{display:flex;gap:7px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}
+.code .bar i{width:11px;height:11px;border-radius:50%;background:#ef4444}.code .bar i:nth-child(2){background:#f59e0b}.code .bar i:nth-child(3){background:#22c55e}
+.code .bar em{margin-left:8px;color:#8fa0bf;font:.78rem Consolas,monospace;font-style:normal}
+.code pre{padding:16px 18px;font:.86rem/1.7 Consolas,monospace;color:#cbd5e1;white-space:pre-wrap}
+.k{color:#c084fc}.s{color:#86efac}.n{color:#fbbf24}.v{color:#7dd3fc}
+.marquee{overflow:hidden;margin-top:44px;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marquee div{display:flex;gap:14px;width:max-content;animation:slide 28s linear infinite}
+.marquee span{padding:8px 18px;border:1px solid var(--line);border-radius:99px;background:var(--card);color:var(--muted);font-size:.85rem;white-space:nowrap}
+@keyframes slide{to{transform:translateX(-50%)}}
+.tl{position:relative;padding-left:34px;display:grid;gap:22px}
+.tl:before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--grad);opacity:.6}
+.tl .card{position:relative}.tl .card:before{content:"";position:absolute;left:-32px;top:30px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--c);box-shadow:0 0 14px var(--c)}
+.tl small{color:var(--c);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.75rem}
+.repo small{color:var(--muted)}.repo .m{display:flex;gap:14px;margin-top:12px;font-size:.82rem;color:var(--muted)}
+form.card{display:grid;gap:14px;margin-top:26px;max-width:620px}
+input,textarea{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--text);font:inherit}
+input:focus,textarea:focus{outline:2px solid var(--a);border-color:transparent}
+#cur{position:fixed;width:34px;height:34px;border:2px solid var(--c);border-radius:50%;pointer-events:none;z-index:998;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;opacity:0}
+#cur.big{width:60px;height:60px;background:rgba(34,211,238,.12)}
+#pal{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.6);display:flex;justify-content:center;align-items:flex-start;padding:15vh 4vw 0;backdrop-filter:blur(6px)}
+#pal[hidden]{display:none}.pbox{width:min(560px,100%);background:var(--bg2);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.pbox input{border:0;border-bottom:1px solid var(--line);border-radius:0;font-size:1.05rem;padding:18px}
+.pbox ul{list-style:none;max-height:320px;overflow:auto}.pbox li{padding:12px 18px;cursor:pointer;color:var(--muted)}.pbox li.on,.pbox li:hover{background:var(--card);color:var(--text)}
+.lang{width:auto;padding:0 12px;font-weight:700;font-size:.8rem}
+#cv{display:none}
+@media print{body>*:not(#cv){display:none!important}#cv{display:block!important;color:#000;background:#fff;padding:30px;font-family:Arial,sans-serif;line-height:1.5}#cv h1{font-size:28px;margin:0}#cv h3{margin:18px 0 4px;border-bottom:1px solid #999}}
+@media(max-width:760px){#cur{display:none}}
+
+/* v3 animation + shine */
+.grad{background:linear-gradient(110deg,var(--a),var(--b),var(--c),var(--a));background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shim 5s linear infinite}
+@keyframes shim{to{background-position:250% center}}
+.aurora{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.aurora i{position:absolute;width:52vmax;height:52vmax;border-radius:50%;filter:blur(100px);opacity:.3;animation:drift 20s ease-in-out infinite alternate}
+.aurora i:nth-child(1){background:#4f8cff;left:-15%;top:-20%}.aurora i:nth-child(2){background:#9b6bff;right:-20%;top:20%;animation-delay:-6s}.aurora i:nth-child(3){background:#22d3ee;left:25%;bottom:-35%;animation-delay:-12s}
+:root[data-theme=light] .aurora i{opacity:.18}
+@keyframes drift{to{transform:translate(8vw,6vh) scale(1.2)}}
+.btn{position:relative;overflow:hidden}
+.btn.p:after,.logo:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.55) 50%,transparent 62%);transform:translateX(-120%);animation:sweep 3s infinite}
+.logo{position:relative;overflow:hidden}
+@keyframes sweep{60%,100%{transform:translateX(120%)}}
+.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.45);transform:scale(0);animation:rip .6s ease-out;pointer-events:none}
+@keyframes rip{to{transform:scale(4);opacity:0}}
+.rv.in{animation:up .8s var(--d,0s) backwards}
+@keyframes up{from{opacity:0;transform:translateY(34px) scale(.97)}}
+h2.rv:after{content:"";display:block;height:3px;width:0;background:var(--grad);border-radius:3px;margin-top:8px;transition:width 1s .3s}
+h2.rv.in:after{width:72px}
+.links a{position:relative}.links a:after{content:"";position:absolute;left:0;bottom:-5px;height:2px;width:0;background:var(--grad);transition:width .3s}.links a:hover:after{width:100%}
+.ico{display:inline-block;animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px) rotate(6deg)}}
+.spark{position:fixed;width:7px;height:7px;border-radius:50%;pointer-events:none;z-index:997;background:radial-gradient(circle,#fff,var(--c));box-shadow:0 0 10px var(--c)}
+.photo{padding:7px 14px;font-size:.8rem;margin:-6px 0 18px;width:fit-content}
+.avatar:hover{box-shadow:0 0 90px rgba(155,107,255,.6)}
+.mail{border-color:var(--c)}
+
+/* v4 */
+@media(max-width:1100px){#menu{display:block}.links{position:absolute;top:100%;left:0;right:0;flex-direction:column;padding:18px;background:var(--bg2);border-bottom:1px solid var(--line);display:none}.links.open{display:flex}}
+.chips{margin-top:10px}
+.proj .shot{aspect-ratio:16/9;border-radius:12px;background:linear-gradient(135deg,rgba(79,140,255,.28),rgba(155,107,255,.28));display:grid;place-items:center;position:relative;overflow:hidden;margin-bottom:16px;color:var(--muted);font-size:.82rem}
+.proj .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.proj .btns{margin-top:16px}.proj .btn{padding:9px 18px;font-size:.85rem}.btn.off{opacity:.5;cursor:default}
+.heat{display:grid;grid-auto-flow:column;grid-template-rows:repeat(7,14px);grid-auto-columns:14px;gap:4px;overflow-x:auto;padding:6px 0}
+.heat i{border-radius:3px;background:var(--line)}
+.heat i[data-l="1"]{background:color-mix(in srgb,var(--c) 30%,transparent)}.heat i[data-l="2"]{background:color-mix(in srgb,var(--c) 55%,transparent)}
+.heat i[data-l="3"]{background:color-mix(in srgb,var(--c) 80%,transparent)}.heat i[data-l="4"]{background:var(--c);box-shadow:0 0 8px var(--c)}
+.heat i.f{visibility:hidden}
+.lrow{display:grid;grid-template-columns:110px 1fr 40px;gap:10px;align-items:center;font-size:.88rem;margin:8px 0;color:var(--muted)}
+.post{cursor:pointer}.post small{color:var(--c);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem}
+.modal{position:fixed;inset:0;z-index:310;background:rgba(0,0,0,.65);backdrop-filter:blur(6px);display:flex;justify-content:center;align-items:flex-start;padding:8vh 4vw;overflow:auto}
+.modal[hidden]{display:none}.rbox{position:relative;width:min(720px,100%);background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:34px}
+.rbox .icon-btn{position:absolute;right:16px;top:16px}.rbox p{color:var(--muted);margin-top:14px}
+.road{display:grid;gap:12px;margin-top:18px}
+.step{display:flex;gap:14px;align-items:center;justify-content:space-between;padding:16px 20px}
+.pill{padding:4px 12px;border-radius:99px;font-size:.75rem;font-weight:700;white-space:nowrap}
+.pill.done{background:rgba(34,197,94,.18);color:#22c55e}.pill.doing{background:rgba(251,191,36,.18);color:#fbbf24}.pill.planned{background:var(--line);color:var(--muted)}
+.big{height:12px}.big i{transition:width 1.6s}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margin:10px 0 14px}.flinks a:hover{color:var(--c)}
+</style>
+</head>
+<body>
+
+<div id="splash">
+  <div class="logo">N</div>
+  <div class="sp-name">NEXAVISION</div>
+  <div class="sp-sub" id="spMsg">Initializing</div>
+  <div class="sp-track"><div class="sp-fill" id="spFill"></div></div>
+  <div class="sp-pct" id="spPct">0%</div>
+</div>
+
+<div id="bar"></div><canvas id="bg"></canvas><div class="glow" id="glow"></div>
+
+<nav>
+  <a href="#home" class="brand">Yohannes<span>.dev</span></a>
+  <div class="links" id="links">
+    <a href="#about" data-i="n_about">About</a><a href="#skills" data-i="n_skills">Skills</a><a href="#projects" data-i="n_projects">Projects</a><a href="#github">GitHub</a><a href="#blog">Blog</a><a href="#roadmap">Roadmap</a><a href="#nexavison">NexaVision</a><a href="#contact" data-i="n_contact">Contact</a>
+    <button class="icon-btn" id="theme" title="Toggle theme" aria-label="Toggle theme">☾</button>
+    <button class="icon-btn lang" id="lang" title="Language" aria-label="Language">አማ</button>
+    <button class="icon-btn" id="kbd" title="Command menu (Ctrl+K)" aria-label="Command menu">⌘</button>
+  </div>
+  <button class="icon-btn" id="menu" aria-label="Menu">☰</button>
+</nav>
+
+<section class="hero" id="home">
+  <div class="avatar rv" title="Replace the initials with your photo: &lt;img src=&quot;photo.jpg&quot;&gt;"><span>YE</span></div>
+  <button class="btn photo rv" id="photoBtn" type="button">📷 Add my photo</button><input type="file" id="photoIn" accept="image/*" hidden>
+  <span class="tag rv"><i class="dot"></i> <span id="greet">Hello</span> · open to internships, projects &amp; collaboration</span>
+  <h1 class="rv" data-i="h_hero">Hi, I’m <span class="grad">Yohannes Ekubay</span></h1>
+  <div class="typed rv"><span id="typed"></span><span class="caret"></span></div>
+  <p class="lead rv" data-i="h_lead">I’m a computer science student who loves turning ideas into working software. I’m building toward my own company, <b>NexaVision</b>, and I share my journey online. I’m looking for an internship where I can learn and contribute.</p>
+  <div class="btns rv">
+    <a class="btn p" href="#projects" data-i="b_work">View my work</a>
+    <a class="btn" href="#contact" data-i="b_touch">Get in touch</a>
+    <button class="btn" id="cvbtn" data-i="b_cv">Download CV</button>
+    <button class="btn" id="copy">Copy profile link</button>
+  </div>
+  <div class="code rv"><div class="bar"><i></i><i></i><i></i><em>yohannes.js</em></div>
+<pre><span class="k">const</span> <span class="v">yohannes</span> = {
+  role: <span class="s">"CS student &amp; builder"</span>,
+  learning: <span class="s">"every day"</span>,
+  stack: [<span class="s">"Python"</span>, <span class="s">"Web"</span>, <span class="s">"AI"</span>],
+  building: <span class="s">"NexaVision"</span>,
+  openToCollab: <span class="n">true</span>
+};</pre></div>
+  <div class="marquee rv"><div id="mq"></div></div>
+</section>
+
+<section id="about">
+  <h2 class="rv" data-i="h_about">About me</h2><p class="sub rv">Student today, founder tomorrow.</p>
+  <div class="grid g2">
+    <div class="card rv"><div class="ico">🎓</div><h3>Who I am</h3>
+      <p>My name is Yohannes Ekubay. I study computer science. I enjoy programming, artificial intelligence and building tools that solve real problems, and I learn best by making real projects rather than only reading about them.</p></div>
+    <div class="card rv"><div class="ico">🚀</div><h3>What drives me</h3>
+      <p>I want to create technology that people actually use. Every assignment, side project and video is practice for the day I launch NexaVision. I like clean code, clear design and finishing what I start.</p></div>
+  </div>
+  <div class="grid g3" style="margin-top:20px">
+    <div class="card rv"><h3>What I’ve built</h3><p>Python simulations, desktop GUI apps and this website.</p></div>
+    <div class="card rv"><h3>What I’m learning</h3><p>Algorithms, AI agents and clean software design.</p></div>
+    <div class="card rv"><h3>What I want to achieve</h3><p>A software engineering internship, then growing NexaVision.</p></div>
+  </div>
+  <div class="stats">
+    <div class="card stat rv"><b data-n="4">0</b><span>Core interests</span></div>
+    <div class="card stat rv"><b data-n="3">0</b><span>Active channels</span></div>
+    <div class="card stat rv"><b data-n="5">0</b><span>Platforms online</span></div>
+    <div class="card stat rv"><b data-n="1">0</b><span>Company in the works</span></div>
+  </div>
+</section>
+
+<section id="education">
+  <h2 class="rv">Education</h2><p class="sub rv">Where I study and what I focus on.</p>
+  <div class="grid g2">
+    <div class="card rv"><div class="ico">🎓</div><h3>Debre Berhan University</h3><p><b>Computer Science</b></p><p>Building a foundation in programming, algorithms and artificial intelligence while applying it in personal projects.</p></div>
+    <div class="card rv"><div class="ico">📚</div><h3>Relevant courses &amp; focus</h3><div class="chips"><span class="chip">Programming</span><span class="chip">Algorithms</span><span class="chip">Artificial Intelligence</span><span class="chip">Numerical Analysis</span><span class="chip">Software design</span></div></div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="rv" data-i="h_skills">Skills</h2><p class="sub rv">What I work with and keep improving.</p>
+  <div class="grid g2">
+    <div class="card rv">
+      <div class="skill"><div><span>Python</span><span>Comfortable</span></div><div class="meter"><i data-w="70"></i></div></div>
+      <div class="skill"><div><span>HTML / CSS / JavaScript</span><span>Comfortable</span></div><div class="meter"><i data-w="65"></i></div></div>
+      <div class="skill"><div><span>AI &amp; intelligent agents</span><span>Learning</span></div><div class="meter"><i data-w="45"></i></div></div>
+      <div class="skill"><div><span>Git &amp; GitHub</span><span>Comfortable</span></div><div class="meter"><i data-w="60"></i></div></div>
+      <p style="font-size:.8rem">Honest self-assessment. I update it as I learn.</p>
+    </div>
+    <div class="card rv"><h3>Tools &amp; interests</h3><p>Things I enjoy exploring:</p>
+      <span class="chip">Python</span><span class="chip">Tkinter GUIs</span><span class="chip">Web design</span><span class="chip">Algorithms</span><span class="chip">Numerical methods</span><span class="chip">Simulation</span><span class="chip">Content creation</span><span class="chip">Entrepreneurship</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="rv" data-i="h_projects">Projects</h2><p class="sub rv">What I built, the tools I used and what each one taught me.</p>
+  <div class="grid g2" id="projGrid"></div>
+</section>
+
+<section id="github">
+  <h2 class="rv">GitHub activity</h2><p class="sub rv" id="repoSub">Loading my GitHub data…</p>
+  <div class="stats" id="ghStats"></div>
+  <div class="grid g2" style="margin-top:20px">
+    <div class="card rv"><h3>Recent contributions</h3><p style="font-size:.85rem">Public activity from the last 13 weeks.</p><div class="heat" id="heat"></div></div>
+    <div class="card rv"><h3>Languages</h3><div id="langs"><p>Loading…</p></div></div>
+  </div>
+  <h3 style="margin:30px 0 14px">Latest repositories</h3><div class="grid g3" id="repoGrid"></div>
+</section>
+
+<section id="journey">
+  <h2 class="rv">Experience &amp; journey</h2><p class="sub rv">Academic and project experience so far. I’m looking for my first internship.</p>
+  <div class="tl">
+    <div class="card rv"><small>Step 1</small><h3>Started computer science</h3><p>Began my degree and learned the fundamentals of programming and problem solving.</p></div>
+    <div class="card rv"><small>Step 2</small><h3>Built real projects</h3><p>Practised with Python, desktop GUIs and AI agent simulations on GitHub.</p></div>
+    <div class="card rv"><small>Now</small><h3>Going deeper</h3><p>Algorithms, numerical methods and software design, while creating content for the NexaVision community.</p></div>
+    <div class="card rv"><small>Next</small><h3>Launch NexaVision</h3><p>Turn the idea into a real company and product.</p></div>
+  </div>
+</section>
+
+<section id="certs">
+  <h2 class="rv">Certificates &amp; achievements</h2><p class="sub rv">Only verified certificates are listed here.</p>
+  <div class="grid g3" id="certGrid"></div>
+</section>
+
+<section id="blog">
+  <h2 class="rv">Technical blog</h2><p class="sub rv">Notes on Python, algorithms, AI and learning to be a software engineer.</p>
+  <div class="grid g3" id="postGrid"></div>
+</section>
+
+<section id="roadmap">
+  <h2 class="rv">Career roadmap</h2><p class="sub rv">My path to becoming a software engineer.</p>
+  <div class="card rv"><div style="display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:8px"><span>Overall progress</span><b id="rpct">0%</b></div><div class="meter big"><i id="rbar"></i></div></div>
+  <div class="road" id="roadList"></div>
+</section>
+
+<section id="nexavison">
+  <div class="nexa rv">
+    <span class="tag">Coming soon</span>
+    <h2 style="margin-top:14px">Nexa<span class="grad">Vision</span></h2>
+    <p class="lead" style="margin-bottom:0">NexaVision is the company I’m preparing to start. Follow along on the channels below to see how it grows from a student idea into a real product.</p>
+    <div class="social">
+      <a href="https://www.youtube.com/@nexavisionofficial4" target="_blank" rel="noopener">▶ YouTube</a>
+      <a href="https://t.me/NexaVisionOfficial" target="_blank" rel="noopener">✈ Telegram channel</a>
+      <a href="https://www.tiktok.com/@nexavisionofficial4" target="_blank" rel="noopener">♪ TikTok</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="rv" data-i="h_connect">Let’s connect</h2><p class="sub rv">The fastest way to reach me is Telegram.</p>
+  <div class="social rv">
+    <a class="mail" href="mailto:johnelves887@gmail.com">✉ johnelves887@gmail.com</a>
+    <a href="https://t.me/Johnweinsberg" target="_blank" rel="noopener">✈ @Johnweinsberg</a>
+    <a href="https://github.com/JohnDevHubCS" target="_blank" rel="noopener">⌥ GitHub · JohnDevHubCS</a>
+    <a href="https://www.tiktok.com/@nexavisionofficial4" target="_blank" rel="noopener">♪ @nexavisionofficial4</a>
+    <a href="https://www.youtube.com/@nexavisionofficial4" target="_blank" rel="noopener">▶ @nexavisionofficial4</a>
+  </div>
+  <form class="card rv" id="form">
+    <h3>Send me a message</h3>
+    <input id="fn" placeholder="Your name" required maxlength="60">
+    <input id="fe" type="email" placeholder="Your email (optional, so I can reply)" maxlength="80">
+    <input id="fh" type="text" tabindex="-1" autocomplete="off" style="display:none">
+    <textarea id="fm" rows="4" placeholder="Your comment or message" required maxlength="800"></textarea>
+    <button class="btn p" type="submit" id="sendBtn">Send message</button>
+    <p style="font-size:.82rem">It goes straight to my inbox. You can also <a href="mailto:johnelves887@gmail.com" style="color:var(--c)">email me</a> or <a href="https://t.me/Johnweinsberg" target="_blank" rel="noopener" style="color:var(--c)">message me on Telegram</a>.</p>
+  </form>
+</section>
+
+<footer>© <span id="yr"></span> Yohannes Ekubay · Built with passion · NexaVision<div class="flinks"><a href="#education">Education</a><a href="#projects">Projects</a><a href="#github">GitHub</a><a href="#certs">Certificates</a><a href="#blog">Blog</a><a href="#roadmap">Roadmap</a><a href="#contact">Contact</a></div><small>Press <b>Ctrl + K</b> for the command menu</small></footer>
+<div id="cv"><h1>Yohannes Ekubay</h1><p>Computer Science student · Debre Berhan University · Founder of NexaVision (in preparation)</p>
+<p>Email: johnelves887@gmail.com · GitHub: github.com/JohnDevHubCS · Telegram: @Johnweinsberg · TikTok / YouTube: @nexavisionofficial4</p>
+<h3>Profile</h3><p>Computer science student who builds practical software and is seeking a software engineering internship.</p>
+<h3>Education</h3><p><b>Debre Berhan University</b> - Computer Science (in progress). Courses: Programming, Algorithms, Artificial Intelligence, Numerical Analysis.</p>
+<h3>Skills</h3><p>Python, HTML/CSS/JavaScript, Git and GitHub, AI agents, simulation, algorithms.</p>
+<h3>Projects</h3><p><b>Classroom Climate Lab</b> - Python/Tkinter simulator comparing four AI agent types on a physics-based classroom model (heat flow, ventilation, solar gain, energy cost).</p>
+<p><b>Personal portfolio</b> - responsive website with live GitHub data, blog, themes and a contact system.</p>
+<h3>Achievements</h3><p>Started the NexaVision community on TikTok, Telegram and YouTube.</p></div>
+<div id="cur"></div>
+<div class="modal" id="reader" hidden><article class="rbox"><button class="icon-btn" id="rclose" aria-label="Close">✕</button><small id="rtag" style="color:var(--c);font-weight:700"></small><h3 id="rt" style="font-size:1.6rem;margin-top:6px"></h3><div id="rb"></div></article></div>
+<div id="pal" hidden><div class="pbox"><input id="pin" placeholder="Type a command…  (Esc to close)" autocomplete="off"><ul id="plist"></ul></div></div>
+<button class="icon-btn" id="top" aria-label="Back to top">↑</button>
+<div id="toast">Link copied</div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+$("#yr").textContent=new Date().getFullYear();
+
+/* theme (remembered when storage is available) */
+const root=document.documentElement;
+try{const t=localStorage.getItem("theme");if(t)root.dataset.theme=t}catch(e){}
+const syncIcon=()=>$("#theme").textContent=root.dataset.theme==="light"?"☀":"☾";
+syncIcon();
+$("#theme").onclick=()=>{root.dataset.theme=root.dataset.theme==="light"?"dark":"light";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}syncIcon()};
+$("#menu").onclick=()=>$("#links").classList.toggle("open");
+$$("#links a").forEach(a=>a.onclick=()=>$("#links").classList.remove("open"));
+
+/* splash screen */
+const msgs=["Initializing","Loading modules","Compiling ideas","Launching NexaVision"];
+let p=0;const fill=$("#spFill"),pct=$("#spPct"),msg=$("#spMsg");
+const iv=setInterval(()=>{
+  p=Math.min(100,p+Math.random()*9+3);
+  fill.style.width=p+"%";pct.textContent=Math.floor(p)+"%";
+  msg.textContent=msgs[Math.min(3,Math.floor(p/26))];
+  if(p>=100){clearInterval(iv);setTimeout(endSplash,350)}
+},110);
+
+/* typing effect */
+function start(){
+  const words=["Computer Science Student","Python Developer","AI Enthusiast","Founder of NexaVision"];
+  let w=0,c=0,del=false;const el=$("#typed");
+  (function tick(){
+    const word=words[w];
+    el.innerHTML="<b>"+word.slice(0,c)+"</b>";
+    if(!del&&c===word.length){del=true;return setTimeout(tick,1400)}
+    if(del&&c===0){del=false;w=(w+1)%words.length}
+    c+=del?-1:1;setTimeout(tick,del?40:85);
+  })();
+  reveal();
+}
+
+/* reveal + counters + skill meters */
+function reveal(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;
+    e.target.classList.add("in");
+    e.target.querySelectorAll("[data-w]").forEach(i=>i.style.width=i.dataset.w+"%");
+    const n=e.target.querySelector("[data-n]");
+    if(n&&!n.done){n.done=1;const to=+n.dataset.n;let v=0;const id=setInterval(()=>{v++;n.textContent=v;if(v>=to)clearInterval(id)},260)}
+    io.unobserve(e.target);
+  }),{threshold:.15});
+  $$(".rv").forEach(el=>io.observe(el));
+}
+
+/* scroll progress, back to top */
+addEventListener("scroll",()=>{
+  const h=document.documentElement;
+  $("#bar").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%";
+  $("#top").classList.toggle("show",h.scrollTop>600);
+});
+$("#top").onclick=()=>scrollTo({top:0});
+
+/* copy link */
+$("#copy").onclick=async()=>{
+  try{await navigator.clipboard.writeText(location.href)}catch(e){}
+  const t=$("#toast");t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1800);
+};
+
+/* cursor glow + 3D tilt cards */
+addEventListener("pointermove",e=>{const g=$("#glow");g.style.left=e.clientX+"px";g.style.top=e.clientY+"px"});
+$$(".tilt").forEach(c=>{
+  c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(700px) rotateY(${x*10}deg) rotateX(${-y*10}deg) translateY(-4px)`});
+  c.addEventListener("pointerleave",()=>c.style.transform="");
+});
+
+/* particle network background */
+const cv=$("#bg"),cx=cv.getContext("2d");let pts=[];
+function size(){cv.width=innerWidth;cv.height=innerHeight;pts=Array.from({length:Math.min(70,Math.floor(innerWidth/18))},()=>({x:Math.random()*cv.width,y:Math.random()*cv.height,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35}))}
+size();addEventListener("resize",size);
+(function draw(){
+  cx.clearRect(0,0,cv.width,cv.height);
+  const light=root.dataset.theme==="light",col=light?"60,90,160":"120,160,255";
+  pts.forEach((a,i)=>{
+    a.x=(a.x+a.vx+cv.width)%cv.width;a.y=(a.y+a.vy+cv.height)%cv.height;
+    cx.fillStyle=`rgba(${col},.7)`;cx.beginPath();cx.arc(a.x,a.y,1.6,0,7);cx.fill();
+    for(let j=i+1;j<pts.length;j++){const b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+      if(d<130){cx.strokeStyle=`rgba(${col},${.16*(1-d/130)})`;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
+  });
+  requestAnimationFrame(draw);
+})();
+
+/* ===== v2 extras ===== */
+$("#splash").insertAdjacentHTML("beforeend",'<div class="sp-sub" style="font-size:.7rem;opacity:.6">Click to skip</div>');
+let splashDone=false;
+function endSplash(){if(splashDone)return;splashDone=true;clearInterval(iv);fill.style.width="100%";pct.textContent="100%";$("#splash").classList.add("hide");start()}
+$("#splash").onclick=endSplash;
+
+/* greeting by visitor's local time */
+const hr=new Date().getHours();
+$("#greet").textContent=hr<12?"Good morning":hr<18?"Good afternoon":"Good evening";
+
+/* tech marquee */
+const techs=["Python","JavaScript","HTML5","CSS3","Tkinter","Git","GitHub","AI Agents","Algorithms","Simulation","Numerical Methods","Web Design","NexaVision"];
+$("#mq").innerHTML=[...techs,...techs].map(t=>"<span>"+t+"</span>").join("");
+
+/* language switch (English / Amharic) */
+const AM={n_about:"ስለ እኔ",n_skills:"ክህሎቶች",n_projects:"ፕሮጀክቶች",n_contact:"ያግኙኝ",
+ h_hero:'ሰላም፣ እኔ <span class="grad">ዮሐንስ ኤቁባይ</span> ነኝ',
+ h_lead:"እኔ የኮምፒውተር ሳይንስ ተማሪ ነኝ። ሐሳቦችን ወደ ሚሠሩ ሶፍትዌሮች መቀየር እወዳለሁ። የራሴን ኩባንያ ኔክሳቪዥንን ለመመሥረት እየተዘጋጀሁ ነው።",
+ b_work:"ሥራዎቼን ይመልከቱ",b_touch:"ያግኙኝ",b_cv:"CV አውርድ",
+ h_about:"ስለ እኔ",h_skills:"ክህሎቶች",h_projects:"ፕሮጀክቶች",h_connect:"እንገናኝ"};
+const items=[...$$("[data-i]")];items.forEach(e=>e.dataset.en=e.innerHTML);
+let lang="en";
+function setLang(l){lang=l;items.forEach(e=>e.innerHTML=l==="am"?AM[e.dataset.i]:e.dataset.en);$("#lang").textContent=l==="am"?"EN":"አማ";document.documentElement.lang=l;try{localStorage.setItem("lang",l)}catch(e){}}
+$("#lang").onclick=()=>setLang(lang==="en"?"am":"en");
+try{if(localStorage.getItem("lang")==="am")setLang("am")}catch(e){}
+
+/* GitHub activity (safe DOM insertion, no innerHTML with API data) */
+const GH="JohnDevHubCS",el=(t,c,x)=>{const n=document.createElement(t);if(c)n.className=c;if(x!==undefined)n.textContent=x;return n};
+const ghj=async u=>{const r=await fetch("https://api.github.com"+u);if(!r.ok)throw 0;return r.json()};
+(async()=>{
+  const sub=$("#repoSub");
+  const [u,rp,ev]=await Promise.allSettled([ghj("/users/"+GH),ghj("/users/"+GH+"/repos?per_page=100&sort=updated"),ghj("/users/"+GH+"/events/public?per_page=100")]);
+  const repos=rp.status==="fulfilled"?rp.value.filter(x=>!x.fork):[],events=ev.status==="fulfilled"?ev.value:[];
+  if(u.status!=="fulfilled"&&rp.status!=="fulfilled"){sub.replaceChildren("Couldn’t load live data right now. ");const a=el("a","","Open my GitHub");a.href="https://github.com/"+GH;a.style.color="var(--c)";sub.append(a);}
+  else sub.textContent=repos.length?"Live data fetched from GitHub.":"No public repositories yet. New projects are coming soon.";
+  /* stats */
+  const counts={};let total=0;
+  events.forEach(e=>{const n=e.type==="PushEvent"?(e.payload.size||1):1;const k=e.created_at.slice(0,10);counts[k]=(counts[k]||0)+n;total+=n});
+  const stars=repos.reduce((a,x)=>a+x.stargazers_count,0);
+  const st=$("#ghStats");
+  [["Public repos",u.status==="fulfilled"?u.value.public_repos:repos.length],["Followers",u.status==="fulfilled"?u.value.followers:0],["Stars earned",stars],["Recent contributions",total]].forEach(([l,v])=>{const c=el("div","card stat rv in");c.append(el("b","",v),el("span","",l));st.append(c)});
+  /* heatmap: 13 weeks */
+  const heat=$("#heat"),today=new Date();today.setHours(0,0,0,0);
+  const start=new Date(today);start.setDate(start.getDate()-today.getDay()-12*7);
+  for(let i=0;i<91;i++){const d=new Date(start);d.setDate(start.getDate()+i);
+    const k=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"),n=counts[k]||0;
+    const c=el("i",d>today?"f":"");c.dataset.l=n===0?0:n<3?1:n<6?2:n<10?3:4;c.title=k+": "+n+" contribution"+(n===1?"":"s");heat.append(c)}
+  /* languages */
+  const L={};repos.forEach(x=>{if(x.language)L[x.language]=(L[x.language]||0)+1});
+  const lg=$("#langs");lg.replaceChildren();const ent=Object.entries(L).sort((a,b)=>b[1]-a[1]).slice(0,6);
+  if(!ent.length)lg.append(el("p","","Language data will appear after my first public repositories."));
+  ent.forEach(([n,c])=>{const r=el("div","lrow");const m=el("div","meter"),i=el("i");i.style.width=Math.round(c/repos.length*100)+"%";m.append(i);r.append(el("span","",n),m,el("span","",c));lg.append(r)});
+  /* latest repos */
+  const g=$("#repoGrid");
+  repos.slice(0,6).forEach(x=>{
+    if(!String(x.html_url).startsWith("https://github.com/"))return;
+    const a=el("a","card repo rv in");a.href=x.html_url;a.target="_blank";a.rel="noopener";
+    const m=el("div","m");m.append(el("span","","● "+(x.language||"Code")),el("span","","★ "+x.stargazers_count));
+    a.append(el("h3","",x.name),el("p","",x.description||"No description yet."),m);g.append(a)});
+})();
+
+/* projects */
+const PROJECTS=[
+ {t:"Classroom Climate Lab",d:"A Python and Tkinter simulator that compares four AI agent types (simple reflex, model-based, goal-based and utility-based) controlling a physics-based classroom. It models heat flow, ventilation, sunlight and energy cost, then reports comfort, kWh and cost.",tech:["Python","Tkinter","AI agents","Simulation"],gh:"https://github.com/"+GH,shot:"screenshots/climate-lab.png"},
+ {t:"This portfolio",d:"A responsive website with a splash screen, dark and light themes, live GitHub data, a command menu, a blog reader and a contact system. Built without frameworks.",tech:["HTML","CSS","JavaScript","FastAPI"],gh:"https://github.com/"+GH,demo:"#home",shot:"screenshots/portfolio.png"},
+ {t:"NexaVision community",d:"The brand and audience I am building for my future company, with content on TikTok, Telegram and YouTube.",tech:["Content","Branding","Community"],demo:"#nexavision",shot:"screenshots/nexavision.png"}];
+const pg=$("#projGrid");
+PROJECTS.forEach((p,i)=>{
+  const c=el("article","card proj rv");c.style.setProperty("--d",i*.1+"s");
+  const sh=el("div","shot");sh.append(el("span","","Screenshot coming soon"));
+  const im=el("img");im.alt=p.t+" screenshot";im.loading="lazy";im.onerror=()=>im.remove();im.src=p.shot;sh.append(im);
+  const ch=el("div","chips");p.tech.forEach(x=>ch.append(el("span","chip",x)));
+  const b=el("div","btns");
+  if(p.gh){const a=el("a","btn","Source code");a.href=p.gh;a.target="_blank";a.rel="noopener";b.append(a)}
+  if(p.demo){const a=el("a","btn p",p.demo.startsWith("#")?"View":"Live demo");a.href=p.demo;b.append(a)}else b.append(el("span","btn off","Live demo coming soon"));
+  c.append(sh,el("h3","",p.t),el("p","",p.d),ch,b);pg.append(c)});
+
+/* certificates: add real, verifiable entries here */
+const CERTS=[]; /* example: {t:"Python Essentials",by:"Issuer name",y:"2026",url:"https://verify-link"} */
+const cg=$("#certGrid");
+if(!CERTS.length){const c=el("div","card rv");c.append(el("div","ico","🏅"),el("h3","","Certificates coming soon"),el("p","","I am working toward my first verified certificates. They will be listed here with verification links."));cg.append(c)}
+CERTS.forEach(x=>{const c=el("div","card rv");c.append(el("div","ico","🏅"),el("h3","",x.t),el("p","",x.by+" · "+x.y));
+  if(String(x.url).startsWith("https://")){const a=el("a","btn","Verify");a.href=x.url;a.target="_blank";a.rel="noopener";c.append(a)}cg.append(c)});
+
+/* blog */
+const POSTS=[
+ {t:"From thermostat to AI agent",tag:"AI",ex:"How four kinds of AI agents handle the same classroom.",b:["A thermostat that only reads the current temperature is a simple reflex agent: too hot, so cool.","Give it memory of recent readings and it becomes model-based, because it can predict where the temperature is heading. Give it a goal, such as being comfortable when class starts, and it can plan ahead. A utility-based agent goes further and weighs discomfort against energy cost before choosing.","In my Classroom Climate Lab, all four agents control the same simulated room under the same weather. On hot days the goal-based and utility-based agents kept the room comfortable, while the simpler ones struggled. The lesson: smarter agents are not magic, they simply use more information about the world."]},
+ {t:"Big-O in plain words",tag:"Algorithms",ex:"What “fast code” really means.",b:["Big-O notation describes how the work of an algorithm grows when the input grows. It ignores small details and focuses on the trend.","Searching a list item by item is O(n): double the list, double the work. Binary search on a sorted list is O(log n): double the list and you add just one extra step.","When I choose a data structure now, I ask one question first: what will this do when there are a million items instead of ten?"]},
+ {t:"My roadmap as a CS student",tag:"Learning",ex:"How I plan to grow from student to software engineer.",b:["I learn best by building. Each course topic gets a small project, and each project goes to GitHub with a clear description.","My priorities are data structures and algorithms, clean Python, Git habits and sharing what I learn. I also keep building NexaVision content to practise communication.","The goal is simple: be a useful intern who can learn fast, write readable code and finish what they start."]}];
+const rd=$("#reader"),pgd=$("#postGrid");
+POSTS.forEach((p,i)=>{const c=el("article","card post rv");c.style.setProperty("--d",i*.1+"s");c.tabIndex=0;
+  const open=()=>{$("#rtag").textContent=p.tag;$("#rt").textContent=p.t;$("#rb").replaceChildren(...p.b.map(x=>el("p","",x)));rd.hidden=false};
+  c.onclick=open;c.onkeydown=e=>{if(e.key==="Enter")open()};
+  c.append(el("small","",p.tag),el("h3","",p.t),el("p","",p.ex));pgd.append(c)});
+$("#rclose").onclick=()=>rd.hidden=true;rd.onclick=e=>{if(e.target===rd)rd.hidden=true};
+addEventListener("keydown",e=>{if(e.key==="Escape")rd.hidden=true});
+
+/* roadmap (edit the status values honestly) */
+const ROAD=[["Build and publish a portfolio website","done"],["Complete an AI agent project (Climate Lab)","done"],["Strengthen data structures and algorithms","doing"],["Contribute to GitHub regularly","doing"],["Earn a verified Python or software certificate","planned"],["Prepare CV and apply for internships","planned"],["Launch the first NexaVision product","planned"]];
+const rl=$("#roadList");
+ROAD.forEach(([t,st],i)=>{const c=el("div","card step rv");c.style.setProperty("--d",i*.08+"s");c.append(el("span","",t),el("span","pill "+st,st==="done"?"Done":st==="doing"?"In progress":"Planned"));rl.append(c)});
+const pctv=Math.round(ROAD.filter(r=>r[1]==="done").length/ROAD.length*100);
+$("#rpct").textContent=pctv+"%";setTimeout(()=>$("#rbar").style.width=pctv+"%",1500);
+
+/* contact: own FastAPI backend if API_URL is set, otherwise FormSubmit, otherwise email app */
+const API_URL=""; /* e.g. "https://api.yourdomain.com/contact" after deploying backend/main.py */
+$("#form").onsubmit=async e=>{
+  e.preventDefault();if($("#fh").value)return;
+  const name=$("#fn").value.trim(),email=$("#fe").value.trim(),message=$("#fm").value.trim(),btn=$("#sendBtn");
+  if(message.length<10){toast("Please write a slightly longer message.");return}
+  btn.disabled=true;btn.textContent="Sending…";
+  try{
+    let r;
+    if(API_URL)r=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name,email,message,website:$("#fh").value})});
+    else{r=await fetch("https://formsubmit.co/ajax/johnelves887@gmail.com",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+      body:JSON.stringify({name,email,message,_subject:"New portfolio message from "+name,_captcha:"false",_template:"table"})});
+      const j=await r.json();if(String(j.success)!=="true")throw 0}
+    if(!r.ok)throw 0;
+    toast("Message sent! Thank you.");e.target.reset();burst(innerWidth/2,innerHeight/2);
+  }catch(_){
+    toast("Opening your email app instead…");
+    location.href="mailto:johnelves887@gmail.com?subject="+encodeURIComponent("Message from "+name)+"&body="+encodeURIComponent(message+"\n\n"+name+(email?" ("+email+")":""));
+  }
+  btn.disabled=false;btn.textContent="Send message";
+};
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2600)}
+
+/* CV (print to PDF) */
+$("#cvbtn").onclick=()=>print();
+
+/* custom cursor ring */
+if(matchMedia("(pointer:fine)").matches){
+  const cur=$("#cur");
+  addEventListener("pointermove",e=>{cur.style.opacity=1;cur.style.left=e.clientX+"px";cur.style.top=e.clientY+"px";cur.classList.toggle("big",!!e.target.closest("a,button,.card,input,textarea"))});
+}
+
+/* command palette (Ctrl/Cmd + K) */
+const go=id=>()=>$(id).scrollIntoView({behavior:"smooth"});
+const cmds=[["Go to About",go("#about")],["Go to My journey",go("#journey")],["Go to Skills",go("#skills")],["Go to Projects",go("#projects")],["Go to NexaVision",go("#nexavison")],["Go to Contact",go("#contact")],
+ ["Toggle dark / light theme",()=>$("#theme").click()],["Switch language (English / አማርኛ)",()=>$("#lang").click()],["Download CV",()=>print()],
+ ["Copy profile link",()=>$("#copy").click()],["Open GitHub",()=>open("https://github.com/JohnDevHubCS","_blank")],["Open Telegram",()=>open("https://t.me/Johnweinsberg","_blank")],
+ ["Open YouTube",()=>open("https://www.youtube.com/@nexavisionofficial4","_blank")],["Open TikTok",()=>open("https://www.tiktok.com/@nexavisionofficial4","_blank")]];
+const pal=$("#pal"),pin=$("#pin"),pl=$("#plist");let sel=0,shown=[];
+function render(){const q=pin.value.toLowerCase();shown=cmds.filter(c=>c[0].toLowerCase().includes(q));sel=Math.min(sel,Math.max(0,shown.length-1));
+  pl.innerHTML=shown.map((c,i)=>`<li class="${i===sel?"on":""}" data-i="${i}">${c[0]}</li>`).join("")||"<li>No results</li>"}
+function openPal(){pal.hidden=false;pin.value="";sel=0;render();pin.focus()}
+function closePal(){pal.hidden=true}
+function run(i){const c=shown[i];if(c){closePal();c[1]()}}
+$("#kbd").onclick=openPal;pin.oninput=()=>{sel=0;render()};
+pl.onclick=e=>{const li=e.target.closest("li[data-i]");if(li)run(+li.dataset.i)};
+pal.onclick=e=>{if(e.target===pal)closePal()};
+addEventListener("keydown",e=>{
+  if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();pal.hidden?openPal():closePal();return}
+  if(pal.hidden)return;
+  if(e.key==="Escape")closePal();
+  if(e.key==="ArrowDown"){e.preventDefault();sel=Math.min(sel+1,shown.length-1);render()}
+  if(e.key==="ArrowUp"){e.preventDefault();sel=Math.max(sel-1,0);render()}
+  if(e.key==="Enter")run(sel);
+});
+
+/* confetti */
+function burst(x,y){
+  for(let i=0;i<44;i++){const d=document.createElement("i");
+    Object.assign(d.style,{position:"fixed",left:x+"px",top:y+"px",width:"8px",height:"8px",borderRadius:"2px",zIndex:500,pointerEvents:"none",background:["#4f8cff","#9b6bff","#22d3ee","#fbbf24"][i%4]});
+    document.body.appendChild(d);
+    const a=Math.random()*6.28,v=120+Math.random()*240;
+    d.animate([{transform:"translate(0,0)",opacity:1},{transform:`translate(${Math.cos(a)*v}px,${Math.sin(a)*v+180}px) rotate(540deg)`,opacity:0}],{duration:1400,easing:"ease-out"}).onfinish=()=>d.remove();}
+}
+$(".avatar").onclick=e=>burst(e.clientX,e.clientY);
+
+/* aurora background */
+document.body.insertAdjacentHTML("afterbegin",'<div class="aurora"><i></i><i></i><i></i></div>');
+addEventListener("scroll",()=>{const y=scrollY*.08;$$(".aurora i").forEach((e,i)=>e.style.marginTop=(i%2?-y:y)+"px")});
+
+/* staggered reveal delays */
+$$(".grid,.stats,.tl,.social").forEach(g=>[...g.children].forEach((c,i)=>c.style.setProperty("--d",(i*.1)+"s")));
+
+/* ripple + magnetic buttons */
+$$(".btn").forEach(b=>{
+  b.addEventListener("click",e=>{const r=b.getBoundingClientRect(),d=Math.max(r.width,r.height),s=document.createElement("span");
+    s.className="ripple";s.style.cssText=`width:${d}px;height:${d}px;left:${e.clientX-r.left-d/2}px;top:${e.clientY-r.top-d/2}px`;b.appendChild(s);setTimeout(()=>s.remove(),600)});
+  b.addEventListener("pointermove",e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.2-2}px)`});
+  b.addEventListener("pointerleave",()=>b.style.transform="");
+});
+
+/* sparkle cursor trail */
+if(matchMedia("(pointer:fine)").matches){
+  let last=0;
+  addEventListener("pointermove",e=>{const n=performance.now();if(n-last<45)return;last=n;
+    const d=document.createElement("i");d.className="spark";d.style.left=e.clientX+"px";d.style.top=e.clientY+"px";document.body.appendChild(d);
+    d.animate([{transform:"translate(-50%,-50%) scale(1)",opacity:.9},{transform:`translate(${(Math.random()-.5)*40-3}px,${Math.random()*40}px) scale(0)`,opacity:0}],{duration:700,easing:"ease-out"}).onfinish=()=>d.remove()});
+}
+
+/* profile photo: auto-load photo.jpg / photo.png, or pick one from your device */
+const av=$(".avatar");
+function setPhoto(src){av.innerHTML='<img alt="Yohannes Ekubay" src="'+src+'">'}
+try{const saved=localStorage.getItem("photo");if(saved)setPhoto(saved)}catch(e){}
+["photo.jpg","photo.jpeg","photo.png"].forEach(f=>{const im=new Image();im.onload=()=>setPhoto(f);im.src=f});
+$("#photoBtn").onclick=()=>$("#photoIn").click();
+$("#photoIn").onchange=e=>{
+  const file=e.target.files[0];if(!file)return;
+  const im=new Image();im.onload=()=>{
+    const c=document.createElement("canvas"),n=Math.min(im.width,im.height);c.width=c.height=360;
+    c.getContext("2d").drawImage(im,(im.width-n)/2,(im.height-n)/2,n,n,0,0,360,360);
+    const url=c.toDataURL("image/jpeg",.85);setPhoto(url);try{localStorage.setItem("photo",url)}catch(_){}
+    toast("Photo added!");burst(innerWidth/2,innerHeight/3)};
+  im.src=URL.createObjectURL(file);
+};
+[["Go to Education","#education"],["Go to GitHub activity","#github"],["Go to Experience","#journey"],["Go to Certificates","#certs"],["Go to Blog","#blog"],["Go to Career roadmap","#roadmap"]].forEach(([n,id])=>cmds.push([n,()=>$(id).scrollIntoView({behavior:"smooth"})]));
+cmds.push(["Send me an email",()=>{location.href="mailto:johnelves887@gmail.com"}]);
+</script>
+</body>
+</html>
